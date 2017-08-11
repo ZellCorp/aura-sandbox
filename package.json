@@ -1,0 +1,15 @@
+{
+  "name": "aura-sandbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cron-example.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zell",
+  "license": "ISC",
+  "dependencies": {
+    "node-milight-promise": "^0.2.31",
+    "node-schedule": "^1.2.3"
+  }
+}
