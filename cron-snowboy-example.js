@@ -21,12 +21,10 @@ const light = new Milight.MilightController({
 });
 
 var mic = {};
-const job = schedule.scheduleJob({second: 20}, function() {
+const job = schedule.scheduleJob('*/20 * * * * *', function() {
   mic = record.start({
     threshold: 0,
-    verbose: true,
-    recordProgram: 'arecord',
-    device: 1
+    verbose: true
   });
   mic.pipe(detector);
   light.sendCommands(commands.bridge.on(), commands.bridge.hue(255), commands.bridge.brightness(100));
