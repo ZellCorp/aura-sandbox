@@ -24,7 +24,9 @@ var mic = {};
 const job = schedule.scheduleJob({second: 20}, function() {
   mic = record.start({
     threshold: 0,
-    verbose: true
+    verbose: true,
+    recordProgram: 'arecord',
+    device: 1
   });
   mic.pipe(detector);
   light.sendCommands(commands.bridge.on(), commands.bridge.hue(255), commands.bridge.brightness(100));
