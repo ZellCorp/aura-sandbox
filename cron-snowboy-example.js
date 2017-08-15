@@ -21,7 +21,7 @@ const light = new Milight.MilightController({
 });
 
 var mic = {};
-const job = schedule.scheduleJob({hour: 22, minute: 0}, function() {
+const job = schedule.scheduleJob({second: 20}, function() {
   mic = record.start({
     threshold: 0,
     verbose: true

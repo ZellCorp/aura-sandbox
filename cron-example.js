@@ -11,7 +11,7 @@ var light = new Milight.MilightController({
     ip: "192.168.0.10",
     type: 'v6'
   });
-
+light.sendCommands(commands.bridge.off());
 var job = schedule.scheduleJob('*/1 * * * *', function(){
   var light = new Milight.MilightController({
       ip: "192.168.0.10",
